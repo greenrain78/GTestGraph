@@ -1,6 +1,7 @@
 {
   "nodeDataArray": [
-    { "key": "0", "text": "Test" },
+    { "key": "0", "text": "Test Runner" },
+    { "key": "body", "text": "TestBody()" },
     { "key": "A1", "text": "PrimeTableTest.SetUp()" },
     { "key": "A2", "text": "PrimeTableTest.TearDown()" },
 
@@ -14,16 +15,14 @@
   ],
   "linkDataArray": [
     { "from": "0", "to": "A1" },
-
     { "from": "A1", "to": "B1" },
-
     { "from": "B1", "to": "C1" },
     { "from": "B1", "to": "D1" },
 
-    { "from": "0", "to": "B2" },
+    { "from": "0", "to": "body" },
+    { "from": "body", "to": "B2" },
     { "from": "B2", "to": "C2" },
     { "from": "B2", "to": "D2" },
-
     
     { "from": "0", "to": "A2" }
   ]

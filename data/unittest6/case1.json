@@ -1,7 +1,7 @@
 {
   "nodeDataArray": [
     { "key": "0", "text": "Test Runner" },
-    { "key": "1", "text": "Test.Body()" },
+    { "key": "1", "text": "TestBody()" },
     { "key": "A1", "text": "PrimeTableTest.SetUp()" },
     { "key": "A2", "text": "PrimeTableTest.TearDown()" },
     { "key": "B1", "text": "OnTheFlyPrimeTable.OnTheFlyPrimeTable()" },

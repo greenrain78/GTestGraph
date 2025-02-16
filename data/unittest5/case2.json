@@ -4,7 +4,7 @@
     { "key": "setup", "text": "QuickTest.SetUp()" },
     { "key": "body", "text": "TestBody()" },
     { "key": "teardown", "text": "IntegerFunctionTest.TearDown()" },
-    { "key": "A1", "text": "sample1.Factorial()" }
+    { "key": "A1", "text": "sample1.IsPrime()" }
   ],
   "linkDataArray": [
     { "from": "0", "to": "setup" },
