@@ -1,0 +1,25 @@
+{
+  "nodeDataArray": [
+    { "key": "test", "text": "Test Runner" },
+    { "key": "main", "text": "Test" },
+    { "key": "fixture", "text": "PrimeTableTest" },
+    { "key": "a", "text": "HybridPrimeTable" },
+    { "key": "a1", "text": "PreCalculatedPrimeTable" },
+    { "key": "a2", "text": "OnTheFlyPrimeTable" }
+  ],
+  "linkDataArray": [
+    { "from": "test", "to": "main", "text": "TestBody()"},
+    { "from": "test", "to": "fixture", "text": "SetUp()"},
+    { "from": "test", "to": "fixture", "text": "TearDown()"},
+    { "from": "fixture", "to": "a", "text": "<<create>>"},
+    { "from": "a", "to": "a1", "text": "<<create>>"},
+    { "from": "a", "to": "a2", "text": "<<create>>"},
+    { "from": "main", "to": "a", "text": "IsPrime()"},
+    { "from": "a", "to": "a1", "text": "IsPrime()"},
+    { "from": "a", "to": "a2", "text": "IsPrime()"},
+    { "from": "main", "to": "a", "text": "GetNextPrime()"},
+    { "from": "a", "to": "a1", "text": "GetNextPrime()"},
+    { "from": "a", "to": "a2", "text": "GetNextPrime()"},
+    { "from": "a2", "to": "a2", "text": "IsPrime()"}
+  ]
+}
