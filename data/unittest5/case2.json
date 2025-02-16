@@ -1,7 +1,7 @@
 {
   "nodeDataArray": [
     { "key": "0", "text": "Test Runner" },
-    { "key": "setup", "text": "QuickTest.SetUp()" },
+    { "key": "setup", "text": "IntegerFunctionTest.SetUp()" },
     { "key": "body", "text": "TestBody()" },
     { "key": "teardown", "text": "IntegerFunctionTest.TearDown()" },
     { "key": "A1", "text": "sample1.IsPrime()" }

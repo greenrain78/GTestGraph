@@ -3,7 +3,7 @@
     { "key": "A", "text": "Test Runner" },
     { "key": "1", "text": "IntegerFunctionTest.Factorial", "url": "index.html?data=data/unittest5/case1.json", "color": "#BA68C8" },
     { "key": "2", "text": "IntegerFunctionTest.IsPrime", "url": "index.html?data=data/unittest5/case2.json", "color": "#BA68C8" },
-    { "key": "3", "text": "QueueTest.DefaultConstructor"},
+    { "key": "3", "text": "QueueTest.DefaultConstructor", "url": "index.html?data=data/unittest5/case3.json", "color": "#BA68C8" },
     { "key": "4", "text": "QueueTest.Dequeue"}
   ],
   "linkDataArray": [

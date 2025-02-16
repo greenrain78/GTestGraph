@@ -1,10 +1,10 @@
 {
   "nodeDataArray": [
     { "key": "0", "text": "Test Runner" },
-    { "key": "setup", "text": "IntegerFunctionTest.SetUp()" },
+    { "key": "setup", "text": "QueueTest.SetUp()" },
     { "key": "body", "text": "TestBody()" },
-    { "key": "teardown", "text": "IntegerFunctionTest.TearDown()" },
-    { "key": "A1", "text": "sample1.Factorial()" }
+    { "key": "teardown", "text": "QueueTest.TearDown()" },
+    { "key": "q1", "text": "Queue.IsPrime()" }
   ],
   "linkDataArray": [
     { "from": "0", "to": "setup" },
