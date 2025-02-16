@@ -4,13 +4,11 @@
     { "key": "A1", "text": "PrimeTableTest.SetUp()" },
     { "key": "A2", "text": "PrimeTableTest.TearDown()" },
 
-    { "key": "B1", "text": "HybridPrimeTable.HybridPrimeTable(False, 1)" },
-    { "key": "B2", "text": "HybridPrimeTable.IsPrime()" },
+    { "key": "B1", "text": "HybridPrimeTable.HybridPrimeTable(true, 1)" },
+    { "key": "B2", "text": "HybridPrimeTable.GetNextPrime()" },
 
     { "key": "C1", "text": "OnTheFlyPrimeTable.OnTheFlyPrimeTable()" },
-    { "key": "C2", "text": "OnTheFlyPrimeTable.IsPrime()" },
-    { "key": "D1", "text": "PreCalculatedPrimeTable.PreCalculatedPrimeTable()" },
-    { "key": "D2", "text": "PreCalculatedPrimeTable.IsPrime()" }
+    { "key": "C2", "text": "OnTheFlyPrimeTable.GetNextPrime()" }
   ],
   "linkDataArray": [
     { "from": "0", "to": "A1" },
@@ -18,11 +16,9 @@
     { "from": "A1", "to": "B1" },
 
     { "from": "B1", "to": "C1" },
-    { "from": "B1", "to": "D1" },
 
     { "from": "0", "to": "B2" },
     { "from": "B2", "to": "C2" },
-    { "from": "B2", "to": "D2" },
 
     
     { "from": "0", "to": "A2" }

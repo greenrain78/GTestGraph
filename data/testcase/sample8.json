@@ -1,18 +1,18 @@
 {
   "nodeDataArray": [
     { "key": "A", "text": "Test Runner" },
-    { "key": "1", "text": "1. MeaningfulTestParameters/PrimeTableTest.ReturnsFalseForNonPrimes(false, 1)", "url": "index.html?data=data/unittest8/case1.json", "color": "#BA68C8" },
-    { "key": "2", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsFalseForNonPrimes(false, 10)"},
-    { "key": "3", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsFalseForNonPrimes(true, 1)"},
-    { "key": "4", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsFalseForNonPrimes(true, 10)"},
-    { "key": "5", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsTrueForPrimes(false, 1)"},
-    { "key": "6", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsTrueForPrimes(false, 10)"},
-    { "key": "7", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsTrueForPrimes(true, 1)"},
-    { "key": "8", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsTrueForPrimes(true, 10)"},
-    { "key": "9", "text": "MeaningfulTestParameters/PrimeTableTest.CanGetNextPrime(false, 1)"},
-    { "key": "10", "text": "MeaningfulTestParameters/PrimeTableTest.CanGetNextPrime(false, 10)"},
-    { "key": "11", "text": "MeaningfulTestParameters/PrimeTableTest.CanGetNextPrime(true, 1)"},
-    { "key": "12", "text": "MeaningfulTestParameters/PrimeTableTest.CanGetNextPrime(true, 10)"}
+    { "key": "1", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsFalseForNonPrimes(false, 1)", "url": "index.html?data=data/unittest8/case1.json", "color": "#BA68C8" },
+    { "key": "2", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsFalseForNonPrimes(false, 10)", "url": "index.html?data=data/unittest8/case2.json", "color": "#BA68C8" },
+    { "key": "3", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsFalseForNonPrimes(true, 1)", "url": "index.html?data=data/unittest8/case3.json", "color": "#BA68C8"},
+    { "key": "4", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsFalseForNonPrimes(true, 10)", "url": "index.html?data=data/unittest8/case4.json", "color": "#BA68C8"},
+    { "key": "5", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsTrueForPrimes(false, 1)", "url": "index.html?data=data/unittest8/case1.json", "color": "#BA68C8" },
+    { "key": "6", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsTrueForPrimes(false, 10)", "url": "index.html?data=data/unittest8/case2.json", "color": "#BA68C8" },
+    { "key": "7", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsTrueForPrimes(true, 1)", "url": "index.html?data=data/unittest8/case3.json", "color": "#BA68C8"},
+    { "key": "8", "text": "MeaningfulTestParameters/PrimeTableTest.ReturnsTrueForPrimes(true, 10)", "url": "index.html?data=data/unittest8/case4.json", "color": "#BA68C8"},
+    { "key": "9", "text": "MeaningfulTestParameters/PrimeTableTest.CanGetNextPrime(false, 1)", "url": "index.html?data=data/unittest8/case5.json", "color": "#BA68C8" },
+    { "key": "10", "text": "MeaningfulTestParameters/PrimeTableTest.CanGetNextPrime(false, 10)", "url": "index.html?data=data/unittest8/case6.json", "color": "#BA68C8" },
+    { "key": "11", "text": "MeaningfulTestParameters/PrimeTableTest.CanGetNextPrime(true, 1)", "url": "index.html?data=data/unittest8/case7.json", "color": "#BA68C8"},
+    { "key": "12", "text": "MeaningfulTestParameters/PrimeTableTest.CanGetNextPrime(true, 10)", "url": "index.html?data=data/unittest8/case8.json", "color": "#BA68C8"}
   ],
   "linkDataArray": [
     { "from": "A", "to": "1" },
