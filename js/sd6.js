@@ -215,6 +215,7 @@ class MessageDraggingTool extends go.DraggingTool {
 }
 
 function refresh_diagram() {
+    document.getElementById("title").textContent = json_data.title;
 
     //setUp 데이터를 추가
     json_data.nodeDataArray = json_data.nodeDataArray.concat(

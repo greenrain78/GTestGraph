@@ -1,5 +1,5 @@
 { 
-  "class": "go.GraphLinksModel",
+  "title": "sample6 PrimeTableTest.ReturnsFalseForNonPrimes<T> 시퀀스 다이어그램",
   "param": {
     "PrimeTable": ["OnTheFlyPrimeTable", "PreCalculatedPrimeTable"]
   },
