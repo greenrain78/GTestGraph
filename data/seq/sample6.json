@@ -1,7 +1,7 @@
 {
   "nodeDataArray": [
     { "key": "A", "text": "Test Runner" },
-    { "key": "1", "text": "1. PrimeTableTest.ReturnsFalseForNonPrimes<OnTheFlyPrimeTable>", "url": "index.html?data=data/unittest6/case1.json", "color": "#BA68C8" },
+    { "key": "1", "text": "1. PrimeTableTest.ReturnsFalseForNonPrimes<OnTheFlyPrimeTable>", "url": "html/sd6.html?data=data/unittest6/sd1.json", "color": "#BA68C8" },
     { "key": "2", "text": "PrimeTableTest.ReturnsTrueForPrimes<OnTheFlyPrimeTable>"},
     { "key": "3", "text": "PrimeTableTest.CanGetNextPrime<OnTheFlyPrimeTable>"},
     { "key": "4", "text": "PrimeTableTest.ReturnsFalseForNonPrimes<PreCalculatedPrimeTable>"},
