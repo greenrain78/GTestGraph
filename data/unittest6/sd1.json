@@ -7,30 +7,46 @@
     {"key":"Runner", "text":"Test Runner", "isGroup":true, "loc":"0 0", "duration":15},
     {"key":"Test", "text":"Test", "isGroup":true, "loc":"100 0", "duration":15},
     {"key":"Fixture", "text":"PrimeTableTest", "isGroup":true, "loc":"200 0", "duration":15},
-    {"key":"PrimeTable", "text":"미지정", "isGroup":true, "loc":"350 0", "duration":15, "paramGroup":"PrimeTable"},
+    {"key":"PrimeTable", "text":"미지정", "isGroup":true, "loc":"350 0", "duration":15, "paramGroup":"PrimeTable"}
 
-    {"group":"Fixture", "start":1, "duration":1},
-    {"group":"PrimeTable", "start":1.5, "duration":0.5},
-
-    {"group":"Test", "start":5, "duration":8},
-    {"group":"PrimeTable", "start":6, "duration":6},
-
-    {"group":"Fixture", "start":14, "duration":1}
   ],
   "linkDataArray": [
-    {"from":"Runner", "to":"Fixture", "text":"SetUp()", "time":1},
-    {"from":"Fixture", "to":"PrimeTable", "text":"<<create>>", "time":1.5},
 
-    {"from":"Runner", "to":"Test", "text":"TestBody()", "time":5},
-    {"from":"Test", "to":"PrimeTable", "text":"isPrime(-5)", "time":6},
-    {"from":"Test", "to":"PrimeTable", "text":"isPrime(0)", "time":7},
-    {"from":"Test", "to":"PrimeTable", "text":"isPrime(1)", "time":8},
-    {"from":"Test", "to":"PrimeTable", "text":"isPrime(4)", "time":9},
-    {"from":"Test", "to":"PrimeTable", "text":"isPrime(6)", "time":10},
-    {"from":"Test", "to":"PrimeTable", "text":"isPrime(100)", "time":11},
-
-    {"from":"Runner", "to":"Fixture", "text":"TearDown()", "time":14}
-
-
-  ]
+  ],
+  "setUp" : {
+    "start":0,
+    "nodeDataArray": [  
+      {"group":"Fixture", "start":1, "duration":1},
+      {"group":"PrimeTable", "start":1.5, "duration":0.5}
+    ],
+    "linkDataArray": [
+      {"from":"Runner", "to":"Fixture", "text":"SetUp()", "time":1},
+      {"from":"Fixture", "to":"PrimeTable", "text":"<<create>>", "time":1.5}
+    ]
+  },
+  "testBody" : {
+    "start":4,
+    "nodeDataArray": [  
+      {"group":"Test", "start":0, "duration":8},
+      {"group":"PrimeTable", "start":1, "duration":6}
+    ],
+    "linkDataArray": [
+      {"from":"Runner", "to":"Test", "text":"TestBody()", "time":0},
+      {"from":"Test", "to":"PrimeTable", "text":"isPrime(-5)", "time":1},
+      {"from":"Test", "to":"PrimeTable", "text":"isPrime(0)", "time":2},
+      {"from":"Test", "to":"PrimeTable", "text":"isPrime(1)", "time":3},
+      {"from":"Test", "to":"PrimeTable", "text":"isPrime(4)", "time":4},
+      {"from":"Test", "to":"PrimeTable", "text":"isPrime(6)", "time":5},
+      {"from":"Test", "to":"PrimeTable", "text":"isPrime(100)", "time":6}
+    ]
+  },
+  "tearDown" : {
+    "start":14,
+    "nodeDataArray": [  
+      {"group":"Fixture", "start":0, "duration":1}
+    ],
+    "linkDataArray": [
+      {"from":"Runner", "to":"Fixture", "text":"TearDown()", "time":0}
+    ]
+  }
 }

@@ -214,6 +214,51 @@ class MessageDraggingTool extends go.DraggingTool {
     }
 }
 
+function refresh_diagram() {
+
+    //setUp 데이터를 추가
+    json_data.nodeDataArray = json_data.nodeDataArray.concat(
+        json_data.setUp.nodeDataArray.map(node => ({
+            ...node,
+            start: node.hasOwnProperty("start") ? node.start + json_data.setUp.start : node.start
+        }))
+    );
+    json_data.linkDataArray = json_data.linkDataArray.concat(
+        json_data.setUp.linkDataArray.map(link => ({
+            ...link,
+            time: link.hasOwnProperty("time") ? link.time + json_data.setUp.start : link.time
+        }))
+    );
+    //testBody 데이터를 추가
+    json_data.nodeDataArray = json_data.nodeDataArray.concat(
+        json_data.testBody.nodeDataArray.map(node => ({
+            ...node,
+            start: node.hasOwnProperty("start") ? node.start + json_data.testBody.start : node.start
+        }))
+    );
+    json_data.linkDataArray = json_data.linkDataArray.concat(
+        json_data.testBody.linkDataArray.map(link => ({
+            ...link,
+            time: link.hasOwnProperty("time") ? link.time + json_data.testBody.start : link.time
+        }))
+    );
+
+    //tearDown 데이터를 추가
+    json_data.nodeDataArray = json_data.nodeDataArray.concat(
+        json_data.tearDown.nodeDataArray.map(node => ({
+            ...node,
+            start: node.hasOwnProperty("start") ? node.start + json_data.tearDown.start : node.start
+        }))
+    );
+    json_data.linkDataArray = json_data.linkDataArray.concat(
+        json_data.tearDown.linkDataArray.map(link => ({
+            ...link,
+            time: link.hasOwnProperty("time") ? link.time + json_data.tearDown.start : link.time
+        }))
+    );
+    myDiagram.model = go.Model.fromJson(json_data);
+
+}
 
 function load() {
     const params = new URLSearchParams(window.location.search);
@@ -223,7 +268,7 @@ function load() {
         .then(response => response.json())
         .then(data => {
             json_data = data;
-            myDiagram.model = go.Model.fromJson(json_data);
+            refresh_diagram();
             init_btn(json_data.param);
         })
         .catch(error => console.error("JSON 로드 실패:", error));
@@ -257,8 +302,8 @@ function init_btn(param) {
 function change_json_data(key, text) {
     json_data.nodeDataArray = json_data.nodeDataArray.map(node => 
         node.paramGroup === key ? { ...node, text: text } : node
-      );
-      myDiagram.model = go.Model.fromJson(json_data);
+    );
+    myDiagram.model = go.Model.fromJson(json_data);
 }      
 
 
