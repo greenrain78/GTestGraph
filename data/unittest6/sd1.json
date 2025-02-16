@@ -1,24 +1,36 @@
 { 
   "class": "go.GraphLinksModel",
+  "param": {
+    "PrimeTable": ["OnTheFlyPrimeTable", "PreCalculatedPrimeTable"]
+  },
   "nodeDataArray": [
-    {"key":"Runner", "text":"Test Runner", "isGroup":true, "loc":"0 0", "duration":12},
-    {"key":"Test", "text":"Test", "isGroup":true, "loc":"100 0", "duration":12},
-    {"key":"Counter", "text":"Counter", "isGroup":true, "loc":"200 0", "duration":12},
+    {"key":"Runner", "text":"Test Runner", "isGroup":true, "loc":"0 0", "duration":15},
+    {"key":"Test", "text":"Test", "isGroup":true, "loc":"100 0", "duration":15},
+    {"key":"Fixture", "text":"PrimeTableTest", "isGroup":true, "loc":"200 0", "duration":15},
+    {"key":"PrimeTable", "text":"미지정", "isGroup":true, "loc":"350 0", "duration":15, "paramGroup":"PrimeTable"},
 
-    {"group":"Test", "start":1, "duration":11},
-    {"group":"Counter", "start":2, "duration":1},
-    {"group":"Counter", "start":4, "duration":1},
-    {"group":"Counter", "start":6, "duration":1},
-    {"group":"Counter", "start":8, "duration":1},
-    {"group":"Counter", "start":10, "duration":1}
+    {"group":"Fixture", "start":1, "duration":1},
+    {"group":"PrimeTable", "start":1.5, "duration":0.5},
+
+    {"group":"Test", "start":5, "duration":8},
+    {"group":"PrimeTable", "start":6, "duration":6},
+
+    {"group":"Fixture", "start":14, "duration":1}
   ],
   "linkDataArray": [
-    {"from":"Runner", "to":"Test", "text":"TestBody()", "time":1},
-    {"from":"Test", "to":"Counter", "text":"Decrement()", "time":2},
-    {"from":"Test", "to":"Counter", "text":"Increment()", "time":4},
-    {"from":"Test", "to":"Counter", "text":"Increment()", "time":6},
-    {"from":"Test", "to":"Counter", "text":"Increment()", "time":8},
-    {"from":"Test", "to":"Counter", "text":"Decrement()", "time":10}
+    {"from":"Runner", "to":"Fixture", "text":"SetUp()", "time":1},
+    {"from":"Fixture", "to":"PrimeTable", "text":"<<create>>", "time":1.5},
+
+    {"from":"Runner", "to":"Test", "text":"TestBody()", "time":5},
+    {"from":"Test", "to":"PrimeTable", "text":"isPrime(-5)", "time":6},
+    {"from":"Test", "to":"PrimeTable", "text":"isPrime(0)", "time":7},
+    {"from":"Test", "to":"PrimeTable", "text":"isPrime(1)", "time":8},
+    {"from":"Test", "to":"PrimeTable", "text":"isPrime(4)", "time":9},
+    {"from":"Test", "to":"PrimeTable", "text":"isPrime(6)", "time":10},
+    {"from":"Test", "to":"PrimeTable", "text":"isPrime(100)", "time":11},
+
+    {"from":"Runner", "to":"Fixture", "text":"TearDown()", "time":14}
+
 
   ]
 }

@@ -1,18 +1,12 @@
 {
   "nodeDataArray": [
     { "key": "A", "text": "Test Runner" },
-    { "key": "1", "text": "1. PrimeTableTest.ReturnsFalseForNonPrimes<OnTheFlyPrimeTable>", "url": "html/sd6.html?data=data/unittest6/sd1.json", "color": "#BA68C8" },
-    { "key": "2", "text": "PrimeTableTest.ReturnsTrueForPrimes<OnTheFlyPrimeTable>"},
-    { "key": "3", "text": "PrimeTableTest.CanGetNextPrime<OnTheFlyPrimeTable>"},
-    { "key": "4", "text": "PrimeTableTest.ReturnsFalseForNonPrimes<PreCalculatedPrimeTable>"},
-    { "key": "5", "text": "PrimeTableTest.ReturnsTrueForPrimes<PreCalculatedPrimeTable>"},
-    { "key": "6", "text": "PrimeTableTest.CanGetNextPrime<PreCalculatedPrimeTable>"},
-    { "key": "7", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsFalseForNonPrimes<OnTheFlyPrimeTable>"},
-    { "key": "8", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsTrueForPrimes<OnTheFlyPrimeTable>"},
-    { "key": "9", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.CanGetNextPrime<OnTheFlyPrimeTable>"},
-    { "key": "10", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsFalseForNonPrimes<PreCalculatedPrimeTable>"},
-    { "key": "11", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsTrueForPrimes<PreCalculatedPrimeTable>"},
-    { "key": "12", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.CanGetNextPrime<PreCalculatedPrimeTable>"}
+    { "key": "1", "text": "1. PrimeTableTest.ReturnsFalseForNonPrimes<T>", "url": "html/sd6.html?data=data/unittest6/sd1.json", "color": "#BA68C8" },
+    { "key": "2", "text": "PrimeTableTest.ReturnsTrueForPrimes<T>"},
+    { "key": "3", "text": "PrimeTableTest.CanGetNextPrime<T>"},
+    { "key": "4", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsFalseForNonPrimes<T>"},
+    { "key": "5", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsTrueForPrimes<T>"},
+    { "key": "6", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.CanGetNextPrime<T>"}
   ],
   "linkDataArray": [
     { "from": "A", "to": "1" },
@@ -20,12 +14,6 @@
     { "from": "A", "to": "3" },
     { "from": "A", "to": "4" },
     { "from": "A", "to": "5" },
-    { "from": "A", "to": "6" },
-    { "from": "A", "to": "7" },
-    { "from": "A", "to": "8" },
-    { "from": "A", "to": "9" },
-    { "from": "A", "to": "10" },
-    { "from": "A", "to": "11" },
-    { "from": "A", "to": "12" }
+    { "from": "A", "to": "6" }
   ]
 }

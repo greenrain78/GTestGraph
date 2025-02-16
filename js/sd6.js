@@ -1,115 +1,4 @@
 
-function init() {
-    myDiagram = new go.Diagram('myDiagramDiv', {
-        allowCopy: false,
-        linkingTool: new MessagingTool(), // defined below
-        'resizingTool.isGridSnapEnabled': true,
-        draggingTool: new MessageDraggingTool(), // defined below
-        'draggingTool.gridSnapCellSize': new go.Size(1, MessageSpacing / 4),
-        'draggingTool.isGridSnapEnabled': true,
-        // automatically extend Lifelines as Activities are moved or resized
-        SelectionMoved: ensureLifelineHeights,
-        PartResized: ensureLifelineHeights,
-        'undoManager.isEnabled': true
-    });
-
-
-    // define the Lifeline Node template.
-    myDiagram.groupTemplate = new go.Group('Vertical', {
-        locationSpot: go.Spot.Bottom,
-        locationObjectName: 'HEADER',
-        minLocation: new go.Point(0, 0),
-        maxLocation: new go.Point(9999, 0),
-        selectionObjectName: 'HEADER'
-    })
-        .bindTwoWay('location', 'loc', go.Point.parse, go.Point.stringify)
-        .add(
-            new go.Panel('Auto', { name: 'HEADER' })
-                .add(
-                    new go.Shape('Rectangle', {
-                        fill: new go.Brush('Linear', {
-                            0: '#bbdefb',
-                            1: go.Brush.darkenBy('#bbdefb', 0.1)
-                        }),
-                        stroke: null
-                    }),
-                    new go.TextBlock({
-                        margin: 5,
-                        font: '400 10pt Source Sans Pro, sans-serif'
-                    })
-                        .bind('text')
-                ),
-            new go.Shape({
-                figure: 'LineV',
-                fill: null,
-                stroke: 'gray',
-                strokeDashArray: [3, 3],
-                width: 1,
-                alignment: go.Spot.Center,
-                portId: '',
-                fromLinkable: true,
-                fromLinkableDuplicates: true,
-                toLinkable: true,
-                toLinkableDuplicates: true,
-                cursor: 'pointer'
-            })
-                .bind('height', 'duration', computeLifelineHeight)
-        );
-
-    // define the Activity Node template
-    myDiagram.nodeTemplate = new go.Node({
-        locationSpot: go.Spot.Top,
-        locationObjectName: 'SHAPE',
-        minLocation: new go.Point(NaN, LinePrefix - ActivityStart),
-        maxLocation: new go.Point(NaN, 19999),
-        selectionObjectName: 'SHAPE',
-        resizable: true,
-        resizeObjectName: 'SHAPE',
-        resizeAdornmentTemplate: new go.Adornment('Spot')
-            .add(
-                new go.Placeholder(),
-                new go.Shape({ // only a bottom resize handle
-                    alignment: go.Spot.Bottom,
-                    cursor: 'col-resize',
-                    desiredSize: new go.Size(6, 6),
-                    fill: 'yellow'
-                })
-            )
-    })
-        .bindTwoWay('location', '', computeActivityLocation, backComputeActivityLocation)
-        .add(
-            new go.Shape('Rectangle', {
-                name: 'SHAPE',
-                fill: 'white',
-                stroke: 'black',
-                width: ActivityWidth,
-                // allow Activities to be resized down to 1/4 of a time unit
-                minSize: new go.Size(ActivityWidth, computeActivityHeight(0.25))
-            })
-                .bindTwoWay('height', 'duration', computeActivityHeight, backComputeActivityHeight)
-        );
-
-    // define the Message Link template.
-    myDiagram.linkTemplate = new MessageLink({ // defined below
-        selectionAdorned: true,
-        curviness: 0
-    })
-        .add(
-            new go.Shape('Rectangle', { stroke: 'black' }),
-            new go.Shape({ toArrow: 'OpenTriangle', stroke: 'black' }),
-            new go.TextBlock({
-                font: '400 9pt Source Sans Pro, sans-serif',
-                segmentIndex: 0,
-                segmentOffset: new go.Point(NaN, NaN),
-                isMultiline: false,
-                editable: true
-            })
-                .bindTwoWay('text')
-        );
-
-    // create the graph by reading the JSON data saved in "mySavedModel" textarea element
-    load();
-}
 
 function ensureLifelineHeights(e) {
     // iterate over all Activities (ignore Groups)
@@ -238,10 +127,6 @@ class MessageLink extends go.Link {
         }
     }
 }
-// end MessageLink
-
-// A custom LinkingTool that fixes the "time" (i.e. the Y coordinate)
-// for both the temporaryLink and the actual newly created Link
 class MessagingTool extends go.LinkingTool {
     constructor(init) {
         super();
@@ -281,10 +166,6 @@ class MessagingTool extends go.LinkingTool {
         return newlink;
     }
 }
-// end MessagingTool
-
-// A custom DraggingTool that supports dragging any number of MessageLinks up and down --
-// changing their data.time value.
 class MessageDraggingTool extends go.DraggingTool {
     constructor(init) {
         super();
@@ -332,17 +213,165 @@ class MessageDraggingTool extends go.DraggingTool {
         }
     }
 }
-// end MessageDraggingTool
 
-// Show the diagram's model in JSON format
-// .then(data => myDiagram.model = go.Model.fromJson(data))
 
 function load() {
     const params = new URLSearchParams(window.location.search);
     const file = "/" + params.get("data") || "seq/data.json";
+
     fetch(file)
         .then(response => response.json())
-        .then(data => myDiagram.model = go.Model.fromJson(data))
+        .then(data => {
+            json_data = data;
+            myDiagram.model = go.Model.fromJson(json_data);
+            init_btn(json_data.param);
+        })
         .catch(error => console.error("JSON 로드 실패:", error));
 }
+function init_btn(param) {
+    console.log(param);
+    const container = document.querySelector(".container");
+    init_data =   {
+        "PrimeTable": ["OnTheFlyPrimeTable", "PreCalculatedPrimeTable"]
+      }
+    const buttonsData = init_data.PrimeTable.map(text => ({ text: text }));
+    buttonsData.forEach(data => {
+        let button = document.createElement("button");
+        button.textContent = data.text;
+        button.classList.add("button", data.className);
+        button.addEventListener("click", function() {
+            if (window.selectedButton) {
+                window.selectedButton.classList.remove("selected");
+                window.selectedButton.disabled = false;
+            }
+            button.classList.add("selected");
+            button.disabled = true;
+            window.selectedButton = button;
+            change_json_data("PrimeTable", button.textContent );
+        });
+        container.appendChild(button);
+
+    });
+}
+
+function change_json_data(key, text) {
+    json_data.nodeDataArray = json_data.nodeDataArray.map(node => 
+        node.paramGroup === key ? { ...node, text: text } : node
+      );
+      myDiagram.model = go.Model.fromJson(json_data);
+}      
+
+
+function init() {
+    myDiagram = new go.Diagram('myDiagramDiv', {
+        allowCopy: false,
+        linkingTool: new MessagingTool(), // defined below
+        'resizingTool.isGridSnapEnabled': true,
+        draggingTool: new MessageDraggingTool(), // defined below
+        'draggingTool.gridSnapCellSize': new go.Size(1, MessageSpacing / 4),
+        'draggingTool.isGridSnapEnabled': true,
+        // automatically extend Lifelines as Activities are moved or resized
+        SelectionMoved: ensureLifelineHeights,
+        PartResized: ensureLifelineHeights,
+        'undoManager.isEnabled': true
+    });
+
+
+    // define the Lifeline Node template.
+    myDiagram.groupTemplate = new go.Group('Vertical', {
+        locationSpot: go.Spot.Bottom,
+        locationObjectName: 'HEADER',
+        minLocation: new go.Point(0, 0),
+        maxLocation: new go.Point(9999, 0),
+        selectionObjectName: 'HEADER'
+    })
+        .bindTwoWay('location', 'loc', go.Point.parse, go.Point.stringify)
+        .add(
+            new go.Panel('Auto', { name: 'HEADER' })
+                .add(
+                    new go.Shape('Rectangle', {
+                        fill: new go.Brush('Linear', {
+                            0: '#bbdefb',
+                            1: go.Brush.darkenBy('#bbdefb', 0.1)
+                        }),
+                        stroke: null
+                    }),
+                    new go.TextBlock({
+                        margin: 5,
+                        font: '400 10pt Source Sans Pro, sans-serif'
+                    })
+                        .bind('text')
+                ),
+            new go.Shape({
+                figure: 'LineV',
+                fill: null,
+                stroke: 'gray',
+                strokeDashArray: [3, 3],
+                width: 1,
+                alignment: go.Spot.Center,
+                portId: '',
+                fromLinkable: true,
+                fromLinkableDuplicates: true,
+                toLinkable: true,
+                toLinkableDuplicates: true,
+                cursor: 'pointer'
+            })
+                .bind('height', 'duration', computeLifelineHeight)
+        );
+
+    // define the Activity Node template
+    myDiagram.nodeTemplate = new go.Node({
+        locationSpot: go.Spot.Top,
+        locationObjectName: 'SHAPE',
+        minLocation: new go.Point(NaN, LinePrefix - ActivityStart),
+        maxLocation: new go.Point(NaN, 19999),
+        selectionObjectName: 'SHAPE',
+        resizable: true,
+        resizeObjectName: 'SHAPE',
+        resizeAdornmentTemplate: new go.Adornment('Spot')
+            .add(
+                new go.Placeholder(),
+                new go.Shape({ // only a bottom resize handle
+                    alignment: go.Spot.Bottom,
+                    cursor: 'col-resize',
+                    desiredSize: new go.Size(6, 6),
+                    fill: 'yellow'
+                })
+            )
+    })
+        .bindTwoWay('location', '', computeActivityLocation, backComputeActivityLocation)
+        .add(
+            new go.Shape('Rectangle', {
+                name: 'SHAPE',
+                fill: 'white',
+                stroke: 'black',
+                width: ActivityWidth,
+                // allow Activities to be resized down to 1/4 of a time unit
+                minSize: new go.Size(ActivityWidth, computeActivityHeight(0.25))
+            })
+                .bindTwoWay('height', 'duration', computeActivityHeight, backComputeActivityHeight)
+        );
+
+    // define the Message Link template.
+    myDiagram.linkTemplate = new MessageLink({ // defined below
+        selectionAdorned: true,
+        curviness: 0
+    })
+        .add(
+            new go.Shape('Rectangle', { stroke: 'black' }),
+            new go.Shape({ toArrow: 'OpenTriangle', stroke: 'black' }),
+            new go.TextBlock({
+                font: '400 9pt Source Sans Pro, sans-serif',
+                segmentIndex: 0,
+                segmentOffset: new go.Point(NaN, NaN),
+                isMultiline: false,
+                editable: true
+            })
+                .bindTwoWay('text')
+        );
+
+    // create the graph by reading the JSON data saved in "mySavedModel" textarea element
+    load();
+}
+
 window.addEventListener('DOMContentLoaded', init);
