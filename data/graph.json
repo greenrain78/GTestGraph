@@ -7,7 +7,7 @@
       { "key": "4", "text": "sample4", "url": "index.html?data=data/testcase/sample4.json", "color": "#BA68C8"  },
       { "key": "5", "text": "sample5", "url": "index.html?data=data/testcase/sample5.json" },
       { "key": "6", "text": "sample6", "url": "index.html?data=data/testcase/sample6.json" },
-      { "key": "7", "text": "sample7", "url": "index.html?data=data/testcase/sample7.json" },
+      { "key": "7", "text": "sample7", "url": "index.html?data=data/testcase/sample7.json", "color": "#BA68C8" },
       { "key": "8", "text": "sample8", "url": "index.html?data=data/testcase/sample8.json", "color": "#BA68C8" },
       { "key": "9", "text": "sample9", "url": "index.html?data=data/testcase/sample9.json" },
       { "key": "10", "text": "sample10", "url": "index.html?data=data/testcase/sample10.json" }       

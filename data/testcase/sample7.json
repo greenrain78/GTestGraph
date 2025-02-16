@@ -2,12 +2,12 @@
   
   "nodeDataArray": [
     { "key": "A", "text": "Test Runner" },
-    { "key": "1", "text": "1. OnTheFlyAndPreCalculated/PrimeTableTestSmpl7.ReturnsFalseForNonPrimes/0x7ff28d451eb", "url": "index.html?data=data/unittest7/case1.json", "color": "#BA68C8" },
-    { "key": "2", "text": "OnTheFlyAndPreCalculated/PrimeTableTestSmpl7.ReturnsFalseForNonPrimes/0x7ff28d43a03"},
-    { "key": "3", "text": "OnTheFlyAndPreCalculated/PrimeTableTestSmpl7.ReturnsTrueForPrimes/0x7ff28d451eb"},
-    { "key": "4", "text": "OnTheFlyAndPreCalculated/PrimeTableTestSmpl7.ReturnsTrueForPrimes/0x7ff28d43a03"},
-    { "key": "5", "text": "OnTheFlyAndPreCalculated/PrimeTableTestSmpl7.CanGetNextPrime/0x7ff28d451eb"},
-    { "key": "6", "text": "OnTheFlyAndPreCalculated/PrimeTableTestSmpl7.CanGetNextPrime/0x7ff28d43a03"}
+    { "key": "1", "text": "OnTheFlyAndPreCalculated/PrimeTableTestSmpl7.ReturnsFalseForNonPrimes/0x7ff28d451eb", "url": "index.html?data=data/unittest7/case1.json", "color": "#BA68C8" },
+    { "key": "2", "text": "OnTheFlyAndPreCalculated/PrimeTableTestSmpl7.ReturnsFalseForNonPrimes/0x7ff28d43a03", "url": "index.html?data=data/unittest7/case1.json", "color": "#BA68C8" },
+    { "key": "3", "text": "OnTheFlyAndPreCalculated/PrimeTableTestSmpl7.ReturnsTrueForPrimes/0x7ff28d451eb", "url": "index.html?data=data/unittest7/case1.json", "color": "#BA68C8" },
+    { "key": "4", "text": "OnTheFlyAndPreCalculated/PrimeTableTestSmpl7.ReturnsTrueForPrimes/0x7ff28d43a03", "url": "index.html?data=data/unittest7/case1.json", "color": "#BA68C8" },
+    { "key": "5", "text": "OnTheFlyAndPreCalculated/PrimeTableTestSmpl7.CanGetNextPrime/0x7ff28d451eb", "url": "index.html?data=data/unittest7/case2.json", "color": "#BA68C8" },
+    { "key": "6", "text": "OnTheFlyAndPreCalculated/PrimeTableTestSmpl7.CanGetNextPrime/0x7ff28d43a03", "url": "index.html?data=data/unittest7/case2.json", "color": "#BA68C8" }
   ],
   "linkDataArray": [
     { "from": "A", "to": "1" },

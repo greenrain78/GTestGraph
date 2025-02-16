@@ -1,0 +1,19 @@
+{
+  "nodeDataArray": [
+    { "key": "0", "text": "Test" },
+    { "key": "A1", "text": "PrimeTableTestSmpl7.SetUp()" },
+    { "key": "A2", "text": "PrimeTableTestSmpl7.TearDown()" },
+    { "key": "B1", "text": "OnTheFlyPrimeTable.OnTheFlyPrimeTable()" },
+    { "key": "B2", "text": "OnTheFlyPrimeTable.GetNextPrime()" },
+    { "key": "C1", "text": "PreCalculatedPrimeTable.PreCalculatedPrimeTable()" },
+    { "key": "C2", "text": "PreCalculatedPrimeTable.GetNextPrime()" }
+  ],
+  "linkDataArray": [
+    { "from": "0", "to": "A1" },
+    { "from": "A1", "to": "B1" },
+    { "from": "A1", "to": "C1" },
+    { "from": "0", "to": "B2" },
+    { "from": "0", "to": "C2" },
+    { "from": "0", "to": "A2" }
+  ]
+}
