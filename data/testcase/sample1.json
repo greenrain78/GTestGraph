@@ -1,0 +1,19 @@
+{
+  "nodeDataArray": [
+    { "key": "A", "text": "Test Runner" },
+    { "key": "1", "text": "FactorialTest.Negative", "url": "index.html?data=data/unittest1/case1.json", "color": "#BA68C8" },
+    { "key": "2", "text": "FactorialTest.Zero" },
+    { "key": "3", "text": "FactorialTest.Positive" },
+    { "key": "4", "text": "IsPrimeTest.Negative" },
+    { "key": "5", "text": "IsPrimeTest.Trivial" },
+    { "key": "6", "text": "IsPrimeTest.Positive" }
+  ],
+  "linkDataArray": [
+    { "from": "A", "to": "1" },
+    { "from": "A", "to": "2" },
+    { "from": "A", "to": "3" },
+    { "from": "A", "to": "4" },
+    { "from": "A", "to": "5" },
+    { "from": "A", "to": "6" }
+  ]
+}

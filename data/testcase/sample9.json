@@ -1,0 +1,13 @@
+{
+  "nodeDataArray": [
+    { "key": "A", "text": "Test Runner" },
+    { "key": "1", "text": "CustomOutputTest.PrintsMessage" },
+    { "key": "2", "text": "CustomOutputTest.Succeeds" },
+    { "key": "3", "text": "CustomOutputTest.Fails" }
+  ],
+  "linkDataArray": [
+    { "from": "A", "to": "1" },
+    { "from": "A", "to": "2" },
+    { "from": "A", "to": "3" }
+  ]
+}

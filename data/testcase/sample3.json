@@ -1,0 +1,13 @@
+{
+  "nodeDataArray": [
+    { "key": "A", "text": "Test Runner" },
+    { "key": "1", "text": "QueueTestSmpl3.DefaultConstructor", "url": "index.html?data=data/unittest3/case1.json", "color": "#BA68C8"},
+    { "key": "2", "text": "QueueTestSmpl3.Dequeue"},
+    { "key": "3", "text": "QueueTestSmpl3.Map"}
+  ],
+  "linkDataArray": [
+    { "from": "A", "to": "1" },
+    { "from": "A", "to": "2" },
+    { "from": "A", "to": "3" }
+  ]
+}

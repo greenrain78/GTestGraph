@@ -1,0 +1,11 @@
+{
+  "nodeDataArray": [
+    { "key": "A", "text": "Test Runner" },
+    { "key": "1", "text": "ListenersTest.DoesNotLeak" },
+    { "key": "2", "text": "ListenersTest.LeaksWater" }
+  ],
+  "linkDataArray": [
+    { "from": "A", "to": "1" },
+    { "from": "A", "to": "2" }
+  ]
+}

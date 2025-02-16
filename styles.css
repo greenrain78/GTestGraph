@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+#myDiagramDiv {
+    width: 90vw;
+    height: 90vh;
+    border: 1px solid black;
+}

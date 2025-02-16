@@ -1,0 +1,11 @@
+{
+  "nodeDataArray": [
+    { "key": "0", "text": "Test" },
+    { "key": "A1", "text": "Counter.Decrement()" },
+    { "key": "A2", "text": "Counter.Increment()" }
+  ],
+  "linkDataArray": [
+    { "from": "0", "to": "A1" },
+    { "from": "0", "to": "A2" }
+  ]
+}

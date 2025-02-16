@@ -1,0 +1,9 @@
+{
+  "nodeDataArray": [
+    { "key": "0", "text": "Test" },
+    { "key": "A1", "text": "sample1.Factorial()" }
+  ],
+  "linkDataArray": [
+    { "from": "0", "to": "A1" }
+  ]
+}

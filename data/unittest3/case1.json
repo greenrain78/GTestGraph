@@ -1,0 +1,13 @@
+{
+  "nodeDataArray": [
+    { "key": "0", "text": "Test" },
+    { "key": "A1", "text": "Queue.Enqueue()" },
+    { "key": "A2", "text": "Queue.Size()" },
+    { "key": "B1", "text": "QueueNode.QueueNode()" }
+  ],
+  "linkDataArray": [
+    { "from": "0", "to": "A1" },
+    { "from": "A1", "to": "B1" },
+    { "from": "0", "to": "A2" }
+  ]
+}

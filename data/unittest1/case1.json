@@ -1,0 +1,9 @@
+{
+  "nodeDataArray": [
+    { "key": "A", "text": "Test" },
+    { "key": "B", "text": "sample1.Factorial" }
+  ],
+  "linkDataArray": [
+    { "from": "A", "to": "B" }
+  ]
+}

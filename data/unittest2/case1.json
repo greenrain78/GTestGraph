@@ -1,0 +1,13 @@
+{
+  "nodeDataArray": [
+    { "key": "A", "text": "Test" },
+    { "key": "1", "text": "MyString.MyString()" },
+    { "key": "2", "text": "MyString.c_string()" },
+    { "key": "3", "text": "MyString.Length()" }
+  ],
+  "linkDataArray": [
+    { "from": "A", "to": "1" },
+    { "from": "A", "to": "2" },
+    { "from": "A", "to": "3" }
+  ]
+}

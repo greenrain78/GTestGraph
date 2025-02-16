@@ -1,0 +1,24 @@
+{ 
+  "class": "go.GraphLinksModel",
+  "nodeDataArray": [
+    {"key":"Runner", "text":"Test Runner", "isGroup":true, "loc":"0 0", "duration":12},
+    {"key":"Test", "text":"Test", "isGroup":true, "loc":"100 0", "duration":12},
+    {"key":"Counter", "text":"Counter", "isGroup":true, "loc":"200 0", "duration":12},
+
+    {"group":"Test", "start":1, "duration":11},
+    {"group":"Counter", "start":2, "duration":1},
+    {"group":"Counter", "start":4, "duration":1},
+    {"group":"Counter", "start":6, "duration":1},
+    {"group":"Counter", "start":8, "duration":1},
+    {"group":"Counter", "start":10, "duration":1}
+  ],
+  "linkDataArray": [
+    {"from":"Runner", "to":"Test", "text":"TestBody()", "time":1},
+    {"from":"Test", "to":"Counter", "text":"Decrement()", "time":2},
+    {"from":"Test", "to":"Counter", "text":"Increment()", "time":4},
+    {"from":"Test", "to":"Counter", "text":"Increment()", "time":6},
+    {"from":"Test", "to":"Counter", "text":"Increment()", "time":8},
+    {"from":"Test", "to":"Counter", "text":"Decrement()", "time":10}
+
+  ]
+}

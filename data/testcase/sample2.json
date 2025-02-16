@@ -1,0 +1,15 @@
+{
+  "nodeDataArray": [
+    { "key": "A", "text": "Test Runner" },
+    { "key": "1", "text": "MyString.DefaultConstructor", "url": "index.html?data=data/unittest2/case1.json", "color": "#BA68C8"},
+    { "key": "2", "text": "MyString.ConstructorFromCString"},
+    { "key": "3", "text": "MyString.CopyConstructor"},
+    { "key": "4", "text": "MyString.Set"}
+  ],
+  "linkDataArray": [
+    { "from": "A", "to": "1" },
+    { "from": "A", "to": "2" },
+    { "from": "A", "to": "3" },
+    { "from": "A", "to": "4" }
+  ]
+}
