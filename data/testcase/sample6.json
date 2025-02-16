@@ -1,18 +1,18 @@
 {
   "nodeDataArray": [
     { "key": "A", "text": "Test Runner" },
-    { "key": "1", "text": "1. PrimeTableTest.ReturnsFalseForNonPrimes<OnTheFlyPrimeTable>", "url": "index.html?data=data/unittest6/case1.json", "color": "#BA68C8" },
-    { "key": "2", "text": "PrimeTableTest.ReturnsTrueForPrimes<OnTheFlyPrimeTable>"},
-    { "key": "3", "text": "PrimeTableTest.CanGetNextPrime<OnTheFlyPrimeTable>"},
-    { "key": "4", "text": "PrimeTableTest.ReturnsFalseForNonPrimes<PreCalculatedPrimeTable>"},
-    { "key": "5", "text": "PrimeTableTest.ReturnsTrueForPrimes<PreCalculatedPrimeTable>"},
-    { "key": "6", "text": "PrimeTableTest.CanGetNextPrime<PreCalculatedPrimeTable>"},
-    { "key": "7", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsFalseForNonPrimes<OnTheFlyPrimeTable>"},
-    { "key": "8", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsTrueForPrimes<OnTheFlyPrimeTable>"},
-    { "key": "9", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.CanGetNextPrime<OnTheFlyPrimeTable>"},
-    { "key": "10", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsFalseForNonPrimes<PreCalculatedPrimeTable>"},
-    { "key": "11", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsTrueForPrimes<PreCalculatedPrimeTable>"},
-    { "key": "12", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.CanGetNextPrime<PreCalculatedPrimeTable>"}
+    { "key": "1", "text": "PrimeTableTest.ReturnsFalseForNonPrimes<OnTheFlyPrimeTable>", "url": "index.html?data=data/unittest6/case1.json", "color": "#BA68C8" },
+    { "key": "2", "text": "PrimeTableTest.ReturnsTrueForPrimes<OnTheFlyPrimeTable>", "url": "index.html?data=data/unittest6/case1.json", "color": "#BA68C8" },
+    { "key": "3", "text": "PrimeTableTest.CanGetNextPrime<OnTheFlyPrimeTable>", "url": "index.html?data=data/unittest6/case1.json", "color": "#BA68C8" },
+    { "key": "4", "text": "PrimeTableTest.ReturnsFalseForNonPrimes<PreCalculatedPrimeTable>", "url": "index.html?data=data/unittest6/case2.json", "color": "#BA68C8" },
+    { "key": "5", "text": "PrimeTableTest.ReturnsTrueForPrimes<PreCalculatedPrimeTable>", "url": "index.html?data=data/unittest6/case2.json", "color": "#BA68C8" },
+    { "key": "6", "text": "PrimeTableTest.CanGetNextPrime<PreCalculatedPrimeTable>", "url": "index.html?data=data/unittest6/case2.json", "color": "#BA68C8" },
+    { "key": "7", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsFalseForNonPrimes<OnTheFlyPrimeTable>", "url": "index.html?data=data/unittest6/case1.json", "color": "#BA68C8" },
+    { "key": "8", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsTrueForPrimes<OnTheFlyPrimeTable>", "url": "index.html?data=data/unittest6/case1.json", "color": "#BA68C8" },
+    { "key": "9", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.CanGetNextPrime<OnTheFlyPrimeTable>", "url": "index.html?data=data/unittest6/case1.json", "color": "#BA68C8" },
+    { "key": "10", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsFalseForNonPrimes<PreCalculatedPrimeTable>", "url": "index.html?data=data/unittest6/case2.json", "color": "#BA68C8" },
+    { "key": "11", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.ReturnsTrueForPrimes<PreCalculatedPrimeTable>", "url": "index.html?data=data/unittest6/case2.json", "color": "#BA68C8" },
+    { "key": "12", "text": "OnTheFlyAndPreCalculated/PrimeTableTest2.CanGetNextPrime<PreCalculatedPrimeTable>", "url": "index.html?data=data/unittest6/case2.json", "color": "#BA68C8" }
   ],
   "linkDataArray": [
     { "from": "A", "to": "1" },
