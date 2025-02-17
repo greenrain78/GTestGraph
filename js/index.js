@@ -100,7 +100,7 @@ function loadJSON(file) {
 // URL에서 데이터 파일 지정
 function getDataFile() {
     const params = new URLSearchParams(window.location.search);
-    return params.get("data") || "data.json";
+    return params.get("data") || "data/index.json";
 }
 
 // JSON 데이터 로드 및 다이어그램 초기화

@@ -3,7 +3,7 @@
       { "key": "testcase", "text": "test case", "url": "index.html?data=data/graph.json" },
       { "key": "seq", "text": "sequence diagram", "url": "index.html?data=data/seq.json" },
       { "key": "code", "text": "unit code" },     
-      { "key": "1", "text": "작업 중", "color": "#F57C00" },
+      { "key": "1", "text": "작업 중1", "color": "#F57C00" },
       { "key": "1", "text": "작업 완료", "color": "#BA68C8" }
     ],
     "linkDataArray": [

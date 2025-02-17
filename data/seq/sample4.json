@@ -1,7 +1,7 @@
 {
   "nodeDataArray": [
     { "key": "A", "text": "Test Runner" },
-    { "key": "1", "text": "Counter.Increment", "url": "seq.html?data=data/unittest4/sd1.json", "color": "#BA68C8" }
+    { "key": "1", "text": "Counter.Increment", "url": "html/sd6.html?data=data/unittest4/sd1.json", "color": "#BA68C8" }
   ],
   "linkDataArray": [
     { "from": "A", "to": "1" }
