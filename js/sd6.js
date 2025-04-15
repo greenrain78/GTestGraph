@@ -263,7 +263,8 @@ function refresh_diagram() {
 
 function load() {
     const params = new URLSearchParams(window.location.search);
-    const defaultPath = location.hostname === 'greenrain78.github.io'
+    const isGithubPages = location.hostname.includes('greenrain78.github.io');
+    const defaultPath = isGithubPages
         ? '/GTestGraph/seq/data.json'
         : '/seq/data.json';
 
