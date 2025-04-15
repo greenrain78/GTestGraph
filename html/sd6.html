@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/sd.css">
     <script src="https://unpkg.com/gojs/release/go.js"></script>
-    <script src="/js/sd6.js" defer></script>
 
     <script>
+        // CSS 동적 로딩
+        const css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.href = location.hostname === 'greenrain78.github.io'
+          ? '/GTestGraph/css/sd.css'
+          : '/css/sd.css';
+        document.head.appendChild(css);
+
+        // JS 동적 로딩
         const script = document.createElement('script');
         script.src = location.hostname === 'greenrain78.github.io'
           ? '/GTestGraph/js/sd6.js'
