@@ -263,7 +263,16 @@ function refresh_diagram() {
 
 function load() {
     const params = new URLSearchParams(window.location.search);
-    const file = "/" + params.get("data") || "seq/data.json";
+    const defaultPath = location.hostname === 'greenrain78.github.io'
+        ? '/GTestGraph/seq/data.json'
+        : '/seq/data.json';
+
+    const fileParam = params.get("data");
+    const file = fileParam
+        ? (location.hostname === 'greenrain78.github.io'
+            ? '/GTestGraph/' + fileParam
+            : '/' + fileParam)
+        : defaultPath;
 
     fetch(file)
         .then(response => response.json())
@@ -274,6 +283,7 @@ function load() {
         })
         .catch(error => console.error("JSON 로드 실패:", error));
 }
+
 function init_btn(param) {
     console.log(param);
     const container = document.querySelector(".container");
