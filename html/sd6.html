@@ -7,14 +7,15 @@
     <script src="https://unpkg.com/gojs/release/go.js"></script>
     <script src="/js/sd6.js" defer></script>
 
-    <script>
-        const script = document.createElement('script');
-        script.src = location.hostname === 'greenrain78.github.io'
-          ? '/GTestGraph/js/sd6.js'
-          : '/js/sd6.js';
-        script.defer = true;
-        document.head.appendChild(script);
-    </script>
+  
+    <!-- JS 로컬용 -->
+    <script src="/js/sd6.js" defer></script>
+    <link rel="stylesheet" href="/css/sd.css" />
+
+    <!-- JS GitHub Pages용 -->
+    <script src="/GTestGraph/js/sd6.js" defer></script>
+    <link rel="stylesheet" href="/GTestGraph/css/sd.css" />
+
     <title>Go.js 다이어그램</title>
 </head>
 <body>
