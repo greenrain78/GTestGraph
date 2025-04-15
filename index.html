@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/gojs/release/go.js"></script>
-    <script src="/js/index.js" defer></script>
+    <script>
+        const script = document.createElement('script');
+        script.src = location.hostname === 'greenrain78.github.io'
+          ? '/GTestGraph/js/index.js'
+          : '/js/index.js';
+        script.defer = true;
+        document.head.appendChild(script);
+      </script>
     <title>Go.js 다이어그램</title>
 </head>
 <body>
